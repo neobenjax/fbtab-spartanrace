@@ -60,6 +60,14 @@ error_reporting(0);
         <?php include 'includes/head_includes.php'; ?>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.7&appId=317689241650052";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
         <?php
             //Variables de reasignación para home_marca/categoria/nombre-de-producto
@@ -88,16 +96,11 @@ error_reporting(0);
             <div class="desplazamiento">
 
                   <?php
-                      # Menu
-                      include_once 'includes/header_nav.php';
                       # Contenido
-
                       include_once $helpers->getView($pagina);
                   ?>
 
                 <?php
-
-                    # Footer
                     include_once 'includes/footer.php';
                 ?>
             </div><!--Fin Contenedor para desplazamiento en MOVIL -->

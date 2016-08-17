@@ -14,7 +14,8 @@
 <script type="text/javascript" src="<?php echo $fullPath;?>assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="<?php echo $fullPath;?>assets/js/jquery.validate.js"></script>
 <!--script src="//connect.facebook.net/en_US/all.js"></script-->
-
+<script src="https://use.typekit.net/air0aiw.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 <script type="text/javascript">
 	//DOCUMENT READY GLOBAL

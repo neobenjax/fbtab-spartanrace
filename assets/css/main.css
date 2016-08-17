@@ -9,6 +9,42 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@font-face {
+    font-family: 'avenir_b';
+    src: url('../fonts/avenir-black.eot') format('eot'),
+         url('../fonts/avenir-black.svg') format('svg'),
+         url('../fonts/avenir-black.ttf') format('ttf'),
+         url('../fonts/avenir-black.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'avenir_h';
+    src: url('../fonts/avenir-heavy.eot') format('eot'),
+         url('../fonts/avenir-heavy.svg') format('svg'),
+         url('../fonts/avenir-heavy.ttf') format('ttf'),
+         url('../fonts/avenir-heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'avenir_l';
+    src: url('../fonts/avenir-light.eot') format('eot'),
+         url('../fonts/avenir-light.svg') format('svg'),
+         url('../fonts/avenir-light.ttf') format('ttf'),
+         url('../fonts/avenir-light.woff') format('woff');
+    font-weight: 300;
+    font-style: 300;
+}
+@font-face {
+    font-family: 'avenir_m';
+    src: url('../fonts/avenir-medium.eot') format('eot'),
+         url('../fonts/avenir-medium.svg') format('svg'),
+         url('../fonts/avenir-medium.ttf') format('ttf'),
+         url('../fonts/avenir-medium.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
 
 html {
     color: #323232;
@@ -17,6 +53,7 @@ html {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     text-shadow:1px 1px 1px 1px rgba(0,0,0,0.005);
+    font-family:"avenir_h",sans-serif;
 }
 
 /*
@@ -645,3 +682,275 @@ header {
     
 }
 
+
+
+body {
+    padding: 0;
+    color: #000;
+    background: #000;
+}
+
+.contenedorTab {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: 810px;
+    margin: 0 auto;
+}
+
+.banner2 {
+    height: 462px;
+    background: url(../img/fondo_second.jpg) no-repeat top center;
+    margin-top: 30px;
+}
+
+h2.titFear {
+    margin: 0;
+    padding: 0;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #e13032;
+    font-family:"bebas-neue",sans-serif;
+    font-style: normal;
+    line-height: 42px;
+    padding: 10px;
+    font-weight: 100;
+}
+
+p.modalidades_tit {
+    color: #e13032;
+    font-family: 'avenir_b';
+    font-size: 24px;
+}
+
+.areaModalidades {
+    margin-top: -153px;
+    background: rgba(125,125,124,0.29);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    color: #fff;
+    font-family: 'avenir_h';
+    text-align: center;
+}
+
+ul.modalidades {
+    list-style: none;
+    text-align: center;
+}
+
+ul.modalidades:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+ul.modalidades > li {
+    width: 25%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+ul.modalidades > li > img.imgMod {
+    display: block;
+    margin: 5px auto 15px;
+}
+
+ul.modalidades > li > .titModalidad {
+    font-size: 25px;
+    font-family: 'avenir_h';
+    line-height: 25px;
+}
+
+ul.modalidades > li > .titModalidad span.big {
+    display: block;
+    font-size: 37px;
+    padding: 3px 0 1px;
+    margin-left: -16px;
+}
+
+ul.modalidades > li > .titModalidad span.small {
+    font-size: 19px;
+}
+
+ul.modalidades > li p.descripMod {
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 12.6px;
+    margin-bottom: 20px;
+}
+
+.guiaCont {
+    background: #898989;
+    padding-bottom: 10px;
+}
+
+p.titGuia {
+    display: inline-block;
+    font-family: 'avenir_b';
+    color: #fff;
+    background: #e13133;
+    padding: 5px 5px;
+    margin: 35px 35px 10px;
+}
+
+p.textoGuia {font-family: 'avenir_m';color: #020101;margin: 0 35px 20px;font-size: 17px;line-height: 18px;}
+
+.areaFormulario {
+    margin: 0 10px;
+    background: #000;
+    color: #e13032;
+}
+
+.areaFormulario form ul.camposFormulario {
+    list-style: none;
+}
+
+.areaFormulario form ul.camposFormulario > li {
+    margin: 20px 0;
+}
+
+.areaFormulario form ul.camposFormulario > li > div.checkbox:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.areaFormulario form#formRegistro {
+    padding: 25px 40px;
+}
+
+.contSpartanKids {
+    height: 273px;
+    background: url(../img/fondo_bottom.png) no-repeat 50% -1px;
+    background-size: 100%;
+}
+
+.leyendaKids {
+    color: #fff;
+    padding: 10px 2px;
+    text-transform: uppercase;
+    font-family:"bebas-neue",sans-serif;
+    font-weight: 100;
+    font-size: 33px;
+    line-height: 35px;
+}
+
+.spartanRaceLigas {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "bebas-neue",sans-serif;
+    font-weight: 100;
+    font-size: 29px;
+    line-height: 35px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.spartanRaceLigas a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button.submitForm {font-family: 'avenir_m';border: none;background: #e13133;color: #fff;padding: 7px 10px;font-size: 14px;float: right;}
+button.submitForm:focus{outline:none;}
+.avisoSubmit:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.areaFormulario form ul.camposFormulario > li label.lblForm {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90px;
+}
+
+.areaFormulario form ul.camposFormulario > li input.inputText {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 100px);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 0!important;
+    border: none!important;
+}
+
+.areaFormulario form ul.camposFormulario > li > div.checkbox input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+input[type="checkbox"]{
+    border: none;
+    -webkit-appearance: none;
+    /*-moz-appearance: none;*/
+    appearance: none;
+    background: #fff;
+    outline: none;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    border:1px solid rgba(0,0,0,0);
+}
+input[type="checkbox"]:checked{
+    background: #e13133;
+    border:1px solid #fff;
+}
+
+.areaFormulario form ul.camposFormulario > li > div.checkbox lable.lblCheck {
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'avenir_b';
+}
+
+.avisoSubmit:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.avisoSubmit > a.avisoPriv {
+    font-size: 13px;
+    font-family: 'avenir_m';
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.bannerHead {
+    position: relative;
+}
+
+.bannerHead > img.imgBanner {
+    position: relative;
+    z-index: 1;
+}
+.bannerHead > a.evento{
+    position:absolute;
+    display:block;
+    top:0;
+    right: 36px;
+    z-index: 2;
+    overflow: hidden;
+    text-indent: -200px;
+    height: 24px;
+}
+
+.bannerHead > a.evento#spartanChicked {
+    top: 38px;
+    width: 335px;
+}
+
+.bannerHead > a.evento#spartanSuper {
+    top: 67px;
+    width: 300px;
+}
