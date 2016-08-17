@@ -2,6 +2,14 @@
 session_set_cookie_params(1800, NULL, NULL, isset($_SERVER["HTTPS"]), TRUE);
 session_start();
 error_reporting(0);
+if($_SERVER['SERVER_PORT']==443)
+  $_SERVER['HTTPS'] = 'on';
+
+if(isset($_SERVER['HTTP_X_FORWARDED_PORT']) && $_SERVER['HTTP_X_FORWARDED_PORT']==443)
+  $_SERVER['HTTPS'] = 'on';
+
+if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO']=='https')
+  $_SERVER['HTTPS'] = 'on';
 ?>
 <!doctype html>
 <html class="no-js" lang="es" ng-app="app">
@@ -30,10 +38,12 @@ error_reporting(0);
         $producto = (isset($_GET['producto']))?htmlspecialchars($_GET['producto'], ENT_QUOTES, 'UTF-8'):'default';
 
         //Variables de directorios
-        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $directorio = dirname($_SERVER["PHP_SELF"]);
         $directorio =($directorio!='')?$directorio:'/';
-        $path = "http://$_SERVER[HTTP_HOST]";
+        $http = (isset($_SERVER['HTTPS'])) ? 'https' : 'http';
+
+        $path = $http."://$_SERVER[HTTP_HOST]";
         $fullPath = $path.$directorio;
         $fullPath = ($fullPath[strlen($fullPath)-1]=='/')?$fullPath:$fullPath.'/';
         
