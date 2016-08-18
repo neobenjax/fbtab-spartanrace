@@ -8,10 +8,10 @@
 <!-- Codigos de redimension para evitar brincos en aspecto visual al redimensionar  -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?php echo $fullPath;?>assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-<script src="<?php echo $fullPath;?>assets/js/vendor/jquery-ui.min.js"></script>
+<!--script src="<?php echo $fullPath;?>assets/js/vendor/jquery-ui.min.js"></script-->
 <!-- Add fancyBox -->
-<link rel="stylesheet" href="<?php echo $fullPath;?>assets/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<script type="text/javascript" src="<?php echo $fullPath;?>assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!--link rel="stylesheet" href="<?php echo $fullPath;?>assets/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /-->
+<!--script type="text/javascript" src="<?php echo $fullPath;?>assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script-->
 <script type="text/javascript" src="<?php echo $fullPath;?>assets/js/jquery.validate.js"></script>
 <!--script src="//connect.facebook.net/en_US/all.js"></script-->
 <script src="https://use.typekit.net/air0aiw.js"></script>
@@ -66,47 +66,46 @@
 
       	$("#formRegistro").submit(function(){
 
-      		$.ajax({
-                    url: FULLPATH+'Controllers/functions.php',
-                    type:"POST",
-                    data: $( this ).serialize()+ "&act=mailUser",
-                    success: function(data){
-                    	console.log(data);
+      		if($("#formRegistro").valid())
+      		{	
+	      		$.ajax({
+	                    url: FULLPATH+'Controllers/functions.php',
+	                    type:"POST",
+	                    data: $( this ).serialize()+ "&act=addUser",
+	                    success: function(data){
+	                    	console.log(data);
 
-                        /*data = data.replace(/(\r\n|\n|\r)/gm,"").trim();
+	                        data = data.replace(/(\r\n|\n|\r)/gm,"").trim();
 
-                        if (data == '-1')
-                        {
-                            $('#errorMsg').html('El correo ya se encuentra registrado.');
-                        }
-                        else if (data == '-3')
-                        {
-                            $('#errorMsg').html('En este momento no es posible procesar su solicitud.');
-                        }
-                        else if (data == '0')
-                        {
-                            $('#errorMsg').html('Ha ocurrido un error inesperado.');
-                        }
-                        else if (data == '1')
-                        {
-                            $('#formRegistro')[0].reset();
-                            $('#errorMsg').html('Hemos registrado su cuenta, para activarla revise su bandeja de correo');
-                        }
-                        else
-                        {
-                            $('#formRegistro')[0].reset();
-                            $('#errorMsg').html('Hemos registrado su cuenta satisfactoriamente');   
-                        }*/
+	                        if (data == '-1')
+	                        {
+	                            $('#errorMsg').html('El correo ya se encuentra registrado.');
+	                        }
+	                        else if (data == '0')
+	                        {
+	                            $('#errorMsg').html('Ha ocurrido un error inesperado.');
+	                        }
+	                        else if (data == '1')
+	                        {
+	                            $('#formRegistro')[0].reset();
+	                            $('#errorMsg').html('Hemos registrado tu cuenta, Gracias por registrarte!');
+	                        }
+	                        else
+	                        {
+	                            $('#formRegistro')[0].reset();
+	                            $('#errorMsg').html('Hemos registrado tu cuenta, Gracias por registrarte!');
+	                        }
 
 
-                    },
-                    error: function(XMLHttpRequest, textStatus, errorThrown) {
-                        $('#errorMsg').html('Ha ocurrido un error inesperado');
-                        return false;
-                        //alert("Status: " + textStatus); alert("Error: " + errorThrown);
-                    }
-                });
+	                    },
+	                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+	                        $('#errorMsg').html('Ha ocurrido un error inesperado');
+	                        //alert("Status: " + textStatus); alert("Error: " + errorThrown);
+	                    }
+	                });
 
+      		}
+	        
       		return false;
       	});
 

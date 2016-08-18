@@ -108,7 +108,7 @@
 					</li>
 					<li>
 						<div class="checkbox">
-							<input type="checkbox" value="si" name="he_particiado">
+							<input type="checkbox" value="si" name="he_participado">
 							<lable class="lblCheck" for="he_participado">He participado en Spartan Race</lable>
 						</div>
 					</li>

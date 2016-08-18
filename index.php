@@ -109,10 +109,7 @@ if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO
                       # Contenido
                       include_once $helpers->getView($pagina);
                   ?>
-
-                <?php
-                    include_once 'includes/footer.php';
-                ?>
+                  
             </div><!--Fin Contenedor para desplazamiento en MOVIL -->
         </div>
     </body>

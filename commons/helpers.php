@@ -13,14 +13,14 @@ class Helpers
   public function __construct()
    {
 
-        /*$this->database = new medoo(array(
+        $this->database = new medoo(array(
                        'database_type' => 'mysql',
                        'database_name' => DATABASE_NAME,
                        'server' => SERVER,
                        'username' => USERNAME,
                        'password' => PASSWORD,
                        'charset' => 'utf8'
-                   ));*/
+                   ));
 
    }
 
