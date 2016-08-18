@@ -954,3 +954,9 @@ input[type="checkbox"]:checked{
     top: 67px;
     width: 300px;
 }
+
+label.error {
+    font-size: 14px;
+    font-family: 'avenir_m';
+    display: block;
+}

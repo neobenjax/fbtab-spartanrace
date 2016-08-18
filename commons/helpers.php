@@ -401,10 +401,11 @@ class Helpers
         $mailer->IsHTML(true);
         $mailer->CharSet = 'UTF-8';
         $mailer->Host = "mail.codice.com";
-        $mailer->From = "";
-        $mailer->FromName = "";
-        $mailer->Username = "";
-        $mailer->Password = "";
+        $mailer->From = "no-reply@spartan-race.com";
+        $mailer->Port = 366;
+        $mailer->FromName = "Spartan Race";
+        $mailer->Username = "sac@codice.com";
+        $mailer->Password = "c0d1c32015";
 
         $mailer->Body = $message;
         $mailer->Subject = $subject;

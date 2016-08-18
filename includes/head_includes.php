@@ -25,6 +25,92 @@
 	CATEGORIA = "<?php echo $categoria?>";
 
 	$(document).ready(function(){
+		// VALIDA FORMULARIO DE REGISTRO
+
+      $("#formRegistro").validate({
+
+	        rules: {
+	            // simple rule, converted to {required:true}
+	            nombre: "required",
+	            edad: {
+		            	required: true,
+		            	number: true,
+		            	min:16,
+		            	max:99
+	            	},
+	            e_mail: {
+	                  required: true,
+	                  email: true
+	            }
+
+	          },
+	          messages: {
+	                nombre:"Debes introducir tu nombre",
+	                e_mail:{
+	                        required: 'Debes ingresar tu correo electrónico',
+	                        email: 'Debes ingresar un correo electrónico válido'
+	                },
+	                edad:{
+	                        required: 'Debes ingresar tu edad',
+	                        min: "Tu edad debe ser mayor a 15 años",
+	                        max: "Tu edad debe ser creíble"
+	                }
+	          },
+	          errorPlacement: function(error, element) {
+	                error.appendTo(element.parent());
+	          }
+
+
+
+	    });
+
+      	$("#formRegistro").submit(function(){
+
+      		$.ajax({
+                    url: FULLPATH+'Controllers/functions.php',
+                    type:"POST",
+                    data: $( this ).serialize()+ "&act=mailUser",
+                    success: function(data){
+                    	console.log(data);
+
+                        /*data = data.replace(/(\r\n|\n|\r)/gm,"").trim();
+
+                        if (data == '-1')
+                        {
+                            $('#errorMsg').html('El correo ya se encuentra registrado.');
+                        }
+                        else if (data == '-3')
+                        {
+                            $('#errorMsg').html('En este momento no es posible procesar su solicitud.');
+                        }
+                        else if (data == '0')
+                        {
+                            $('#errorMsg').html('Ha ocurrido un error inesperado.');
+                        }
+                        else if (data == '1')
+                        {
+                            $('#formRegistro')[0].reset();
+                            $('#errorMsg').html('Hemos registrado su cuenta, para activarla revise su bandeja de correo');
+                        }
+                        else
+                        {
+                            $('#formRegistro')[0].reset();
+                            $('#errorMsg').html('Hemos registrado su cuenta satisfactoriamente');   
+                        }*/
+
+
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        $('#errorMsg').html('Ha ocurrido un error inesperado');
+                        return false;
+                        //alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                    }
+                });
+
+      		return false;
+      	});
+
+
 	});
 
 	function alertaFancy(titulo,mensaje,btnOk){

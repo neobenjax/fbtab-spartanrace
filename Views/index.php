@@ -99,17 +99,17 @@
 						<input type="text" class="inputText" name="nombre">
 					</li>
 					<li>
-						<label for="e-mail" class="lblForm">EMAIL</label>
-						<input type="email" class="inputText" name="e-mail">
+						<label for="e_mail" class="lblForm">EMAIL</label>
+						<input type="email" class="inputText" name="e_mail">
 					</li>
 					<li>
 						<label for="edad" class="lblForm">EDAD</label>
-						<input type="number" class="inputText" name="edad">
+						<input type="number" class="inputText" name="edad" max="99" min="16">
 					</li>
 					<li>
 						<div class="checkbox">
-							<input type="checkbox" value="si" name="he-particiado">
-							<lable class="lblCheck">He participado en Spartan Race</lable>
+							<input type="checkbox" value="si" name="he_particiado">
+							<lable class="lblCheck" for="he_participado">He participado en Spartan Race</lable>
 						</div>
 					</li>
 				</ul>
@@ -121,6 +121,8 @@
 					<button class="submitForm">
 						OBTÉN LA GUÍA DE SUPERVIVENCIA
 					</button>
+
+					<div id="errorMsg"></div>
 
 				</div>
 
