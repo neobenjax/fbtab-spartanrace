@@ -104,7 +104,7 @@
 					</li>
 					<li>
 						<label for="edad" class="lblForm">EDAD</label>
-						<input type="number" class="inputText" name="edad" max="99" min="16">
+						<input type="number" class="inputText" name="edad" max="99" min="16" id="edad">
 					</li>
 					<li>
 						<div class="checkbox">

@@ -24,6 +24,19 @@
 	SUBPAGINA = "<?php echo $subpagina?>",
 	CATEGORIA = "<?php echo $categoria?>";
 
+	$(document).on('keypress','[type="number"]',function(event){
+	    if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+	        event.preventDefault();
+	    }
+	});
+
+	/*$('#edad').keypress(function(event){
+		console.log(event.which);
+	    if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+	        event.preventDefault();
+	    }
+	});*/
+
 	$(document).ready(function(){
 		// VALIDA FORMULARIO DE REGISTRO
 
@@ -53,7 +66,8 @@
 	                edad:{
 	                        required: 'Debes ingresar tu edad',
 	                        min: "Tu edad debe ser mayor a 15 años",
-	                        max: "Tu edad debe ser creíble"
+	                        max: "Tu edad debe ser creíble",
+	                        number:"Solo números"
 	                }
 	          },
 	          errorPlacement: function(error, element) {
@@ -88,12 +102,12 @@
 	                        else if (data == '1')
 	                        {
 	                            $('#formRegistro')[0].reset();
-	                            $('#errorMsg').html('Hemos registrado tu cuenta, Gracias por registrarte!');
+	                            $('#errorMsg').html('Gracias por registrarte!');
 	                        }
 	                        else
 	                        {
 	                            $('#formRegistro')[0].reset();
-	                            $('#errorMsg').html('Hemos registrado tu cuenta, Gracias por registrarte!');
+	                            $('#errorMsg').html('Gracias por registrarte!');
 	                        }
 
 
