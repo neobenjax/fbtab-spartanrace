@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?php echo $fullPath?>assets/css/normalize.css">
-<link rel="stylesheet" href="<?php echo $fullPath?>assets/css/main.css">
+<link rel="stylesheet" href="<?php echo $fullPath?>assets/css/main_fb.css">
 <script src="<?php echo $fullPath?>assets/js/vendor/modernizr-2.8.3.min.js"></script>
 <!--link rel="stylesheet" href="<?php echo $fullPath?>assets/css/jquery-ui.css"-->
 <!--script src='https://www.google.com/recaptcha/api.js'></script-->
