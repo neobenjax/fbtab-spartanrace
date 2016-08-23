@@ -8,20 +8,34 @@ include_once 'base_facebook.php';
 class Helpers
 {
 
-   public $database;
+  public $database;
 
   public function __construct()
    {
 
-        $this->database = new medoo(array(
+        /*$this->database = new medoo(array(
                        'database_type' => 'mysql',
                        'database_name' => DATABASE_NAME,
                        'server' => SERVER,
                        'username' => USERNAME,
                        'password' => PASSWORD,
                        'charset' => 'utf8'
-                   ));
+                   ));*/
 
+   }
+
+   private function connectDB(){
+      $this->database = new medoo(array(
+                         'database_type' => 'mysql',
+                         'database_name' => DATABASE_NAME,
+                         'server' => SERVER,
+                         'username' => USERNAME,
+                         'password' => PASSWORD,
+                         'charset' => 'utf8'
+                     ));
+   }
+   private function closeConnDB(){
+      $this->database = null;
    }
 
    # ---------------
@@ -366,7 +380,9 @@ class Helpers
 
     public function getOptionsWhere($table,$field_name,$where)
     {
+        $this->connectDB();
         $options = $this->database->select($table,'*',$where);
+        $this->closeConnDB();
         foreach ($options as $option)
         {
             echo '<option value="'.$option['id'].'">'.$option[$field_name].'</option>';
@@ -376,7 +392,9 @@ class Helpers
 
     public function getOptionsSelect($table,$field_name,$opt_selected)
     {
+        $this->connectDB();
         $options = $this->database->select($table,'*',array('status'=>1));
+        $this->closeConnDB();
         foreach ($options as $option)
         {
             $selected = '';
@@ -423,6 +441,7 @@ class Helpers
 
     public function getDataSanitize($prepare,$params,$tipoFetch)
     {
+      $this->connectDB();
       $sth = $this->database->pdo->prepare($prepare);
 
       for($i=0,$n=count($params);$i<$n;$i++)
@@ -451,6 +470,7 @@ class Helpers
 
     public function insertDataSanitize($prepare,$params)
     {
+      $this->connectDB();
       $sth = $this->database->pdo->prepare($prepare);
 
       for($i=0,$n=count($params);$i<$n;$i++)
@@ -468,6 +488,7 @@ class Helpers
 
     public function updateDataSanitize($prepare,$params)
     {
+      $this->connectDB();
       $sth = $this->database->pdo->prepare($prepare);
 
       for($i=0,$n=count($params);$i<$n;$i++)

@@ -1,13 +1,17 @@
 <div class="contenedorTab">
 	
 	<div class="bannerHead">
+		<span class="hashTag">#SpartanRACEMX</span>
 		<a href="http://spartanrace.mx/race-details/?event_id=1955/spartan-race-chicked-coatepec-harinas.&lang=es" class="evento" id="spartanChicked" title="SPARTAN CHICKED 03/09" target="_blank">
-			SPARTAN CHICKED 03/09
+			SPARTAN CHICKED <span class="fechaRojo">03/09</span>
 		</a>
 		<a href="http://spartanrace.mx/race-details/?event_id=1953/spartan-race-super-coatepec-harinas&lang=es" class="evento" id="spartanSuper" title="SPARTAN SUPER 04/09" target="_blank">
-			SPARTAN SUPER 04/09
+			SPARTAN SUPER <span class="fechaRojo">04/09</span>
 		</a>
-		<img src="<?php echo $fullPath; ?>assets/img/fondo_top.png" alt="Spartan Race Estado de México - Coatepec Harinas" class="imgBanner">
+		<span class="registrateYa">¡REGÍSTRATE YA!</span>
+		<span class="estado">ESTADO DE MÉXICO</span>
+		<span class="locacion">Coatepec Harinas</span>
+		<img src="<?php echo $fullPath; ?>assets/img/fondo_top_2.png" alt="Spartan Race Estado de México - Coatepec Harinas" class="imgBanner">
 	</div>
 
 	<div class="banner2">
@@ -132,11 +136,13 @@
 
 	</div>
 
-	<div class="contSpartanKids"></div>
+	<div class="contSpartanKids">
+		<img src="<?php echo $fullPath; ?>assets/img/fondo_bottom.png" alt="" class="imgBanner">
+	</div>
 
 	<div class="leyendaKids">
 		
-		Saltar, correr, llenarse de lodo, ayudarse unos a otros y divertirse <br> mientras aprenden a conquistar obstáculos.
+		Saltar, correr, llenarse de lodo, ayudarse unos a otros y divertirse mientras aprenden a conquistar obstáculos.
 
 	</div>
 

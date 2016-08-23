@@ -624,63 +624,6 @@ header {
 }
 
 
-@media only screen and (max-width : 1400px){
-
-
-}
-@media only screen and (max-width : 1300px) {
-
-}
-@media only screen and (max-width : 1200px) {
-
-}
-@media only screen and (max-width : 1100px) {
-
-}
-
-@media only screen and (max-width : 1024px) {
- 
-
-}
-
-@media only screen and (max-width : 992px) {
-
-}
-
-@media only screen and (max-width : 800px) {
-
-}
-
-
-@media only screen and (max-width : 768px) {
-
-
-}
-
-/*@media only screen and (max-width : 480px) {*/
-@media only screen and (max-width : 667px) {
-    .paginador {width: 100%;display: block;}
-    .captcha{width:100%;overflow: hidden;}
-    .captcha .g-recaptcha{width:100%;transform:scale(0.9);-webkit-transform:scale(0.9);transform-origin:0 0;-webkit-transform-origin:0 0;}
-    .captcha .g-recaptcha div{width: 100%!important;}
-
-}
-
-@media only screen and (max-width : 480px) {
-
-
-}
-@media only screen and (max-width : 360px){
-    .captcha .g-recaptcha{transform: scale(0.8);-webkit-transform: scale(0.8);transform-origin: 0 0;-webkit-transform-origin: 50% 50%;}
-
-}
-
-@media only screen and (max-width : 320px) {
-
-  .captcha .g-recaptcha{margin-left: -17px;}
-
-    
-}
 
 
 
@@ -823,15 +766,13 @@ p.textoGuia {font-family: 'avenir_m';color: #020101;margin: 0 35px 20px;font-siz
     padding: 25px 40px;
 }
 
-.contSpartanKids {
-    height: 273px;
-    background: url(../img/fondo_bottom.png) no-repeat 50% -1px;
-    background-size: 100%;
+.contSpartanKids img.imgBanner{
+    width:100%;
 }
 
 .leyendaKids {
     color: #fff;
-    padding: 10px 2px;
+    padding: 10px 17px;
     text-transform: uppercase;
     font-family:"bebas-neue",sans-serif;
     font-weight: 100;
@@ -933,30 +874,204 @@ input[type="checkbox"]:checked{
 .bannerHead > img.imgBanner {
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 .bannerHead > a.evento{
     position:absolute;
     display:block;
     top:0;
-    right: 36px;
+    right: 35px;
     z-index: 2;
-    overflow: hidden;
-    text-indent: -200px;
-    height: 24px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 28px;
+}
+
+.bannerHead > a.evento > span.fechaRojo {
+    color: #e01f2d;
+    font-size: 27px;
 }
 
 .bannerHead > a.evento#spartanChicked {
-    top: 38px;
-    width: 335px;
+    top: 32px;
+    /* width: 335px; */
 }
 
 .bannerHead > a.evento#spartanSuper {
-    top: 67px;
-    width: 300px;
+    top: 61px;
+    /* width: 300px; */
 }
 
 label.error {
     font-size: 14px;
     font-family: 'avenir_m';
     display: block;
+}
+
+span.registrateYa {
+    position: absolute;
+    display: block;
+    top: 95px;
+    right: 33px;
+    z-index: 2;
+    color: #e12f32;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 42px;
+}
+
+span.estado {
+    position: absolute;
+    display: block;
+    bottom: -27px;
+    left: 40px;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 82px;
+    font-family: "bebas-neue",sans-serif;
+}
+
+span.locacion {
+    position: absolute;
+    display: block;
+    right: 24px;
+    z-index: 2;
+    color: #e12f32;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 43px;
+    bottom: -3px;
+    font-family: "bebas-neue",sans-serif;
+}
+
+span.hashTag {
+    position: absolute;
+    display: block;
+    top: 35px;
+    left: 41px;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 27px;
+    font-family: "bebas-neue",sans-serif;
+}
+
+
+@media only screen and (max-width : 1400px){
+
+
+}
+@media only screen and (max-width : 1300px) {
+
+}
+@media only screen and (max-width : 1200px) {
+
+}
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 1024px) {
+ 
+
+}
+
+@media only screen and (max-width : 992px) {
+    span.estado{left: 10px;}
+
+}
+
+
+@media only screen and (max-width : 768px) {
+     span.estado{left: 10px;}
+     span.locacion{font-size: 31px;bottom: 0px;width: 100%;right: 0;text-align: center;}
+     .areaFormulario form#formRegistro {padding: 15px 20px;}
+
+}
+
+/*@media only screen and (max-width : 480px) {*/
+@media only screen and (max-width : 667px) {
+    .paginador {width: 100%;display: block;}
+    .captcha{width:100%;overflow: hidden;}
+    .captcha .g-recaptcha{width:100%;transform:scale(0.9);-webkit-transform:scale(0.9);transform-origin:0 0;-webkit-transform-origin:0 0;}
+    .captcha .g-recaptcha div{width: 100%!important;}
+
+
+    span.estado{left: 0px;bottom: 30px;width: 100%;text-align: center;font-size: 60px;}
+    span.locacion{font-size: 34px;bottom: 4px;}
+    .leyendaKids{font-size: 25px;line-height: 30px;}
+    .areaModalidades{margin: -153px 0 0;}
+    ul.modalidades > li{padding: 0 20px;}
+    ul.modalidades > li p.descripMod{text-align: left;}
+
+}
+
+@media only screen and (max-width : 600px) {
+    .bannerHead > a.evento{font-size: 25px;background: rgba(0,0,0,0.5);}
+    .bannerHead > a.evento#spartanChicked {top: 70px;width: 100%;text-align: center;right: 0;}
+    .bannerHead > a.evento#spartanSuper {top: 120px;width: 100%;right: 0;text-align: center;}
+    span.registrateYa{top: 7px;font-size: 30px;}
+    span.hashTag{top: 10px;}
+    ul.modalidades > li > .titModalidad {font-size: 20px;line-height: 21px;}
+    ul.modalidades > li > .titModalidad span.big {font-size: 30px;padding: 0px 0 0px;}
+    ul.modalidades > li > .titModalidad span.small {font-size: 16px;margin-top: 5px;display: block;}
+    ul.modalidades > li p.descripMod {margin-top: 10px;font-size: 12px;margin-bottom: 10px;}
+
+
+}
+
+@media only screen and (max-width : 480px) {
+    
+    .bannerHead > a.evento{font-size: 25px;background: rgba(0,0,0,0.5);}
+    .bannerHead > a.evento#spartanChicked {top: 100px;}
+    .bannerHead > a.evento#spartanSuper {top: 160px;}
+    span.registrateYa{top: 54px;width: 100%;right: 0;text-align: center;}
+    span.hashTag{top: 10px;width: 100%;text-align: center;left: 0;}
+    
+    span.estado{font-size: 50px;}
+    span.locacion{font-size: 24px;}
+    .leyendaKids{font-size: 21px;line-height: 25px;}
+    h2.titFear{font-size: 30px;line-height: 30px;}
+    ul.modalidades > li > img.imgMod {width:100%;}
+    .spartanRaceLigas{font-size: 25px;margin-top: 40px;}
+    button.submitForm{float: none;margin: 10px 0;padding: 7px 0;width: 100%;}
+    .avisoSubmit > a.avisoPriv{display:block;text-align:center;padding-bottom:10px;}
+    .areaFormulario form ul.camposFormulario > li label.lblForm{font-size:12px;width:60px;}
+    .areaFormulario form ul.camposFormulario > li input.inputText{width: calc(100% - 70px);}
+
+    ul.modalidades > li > .titModalidad {font-size: 18px;line-height: 18px;}
+    ul.modalidades > li > .titModalidad span.big {font-size: 20px;}
+    ul.modalidades > li > .titModalidad span.small {font-size: 14px;margin-top: 5px;display: block;}
+
+}
+@media only screen and (max-width : 360px){
+    .captcha .g-recaptcha{transform: scale(0.8);-webkit-transform: scale(0.8);transform-origin: 0 0;-webkit-transform-origin: 50% 50%;}
+
+    ul.modalidades > li{width: 50%;}
+    ul.modalidades > li p.descripMod {text-align:center;}
+    span.estado{font-size: 40px;}
+    span.locacion{font-size: 25px;}
+    .leyendaKids{font-size: 21px;line-height: 25px;}
+    h2.titFear{font-size: 30px;line-height: 30px;}
+    p.titGuia {font-size:12px;padding: 5px 5px;margin: 25px 25px 10px;}
+    p.textoGuia {margin: 0 25px 20px;font-size: 16px;line-height: 16px;}
+    .areaFormulario form ul.camposFormulario > li label.lblForm{width:100%;}
+    .areaFormulario form ul.camposFormulario > li input.inputText{width: 100%;}
+
+}
+
+@media only screen and (max-width : 320px) {
+
+  .captcha .g-recaptcha{margin-left: -17px;}
+
+    
 }
