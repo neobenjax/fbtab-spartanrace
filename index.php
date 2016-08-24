@@ -10,6 +10,40 @@ if(isset($_SERVER['HTTP_X_FORWARDED_PORT']) && $_SERVER['HTTP_X_FORWARDED_PORT']
 
 if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO']=='https')
   $_SERVER['HTTPS'] = 'on';
+
+include_once 'commons/helpers.php';
+
+$helpers = new Helpers();
+
+//Variables de navegacion
+$pagina = (isset($_GET['pagina']))?htmlspecialchars($_GET['pagina'], ENT_QUOTES, 'UTF-8'):'index';
+$subpagina = (isset($_GET['subpagina']))?htmlspecialchars($_GET['subpagina'], ENT_QUOTES, 'UTF-8'):'default';
+$categoria = (isset($_GET['categoria']))?htmlspecialchars($_GET['categoria'], ENT_QUOTES, 'UTF-8'):'default';
+$producto = (isset($_GET['producto']))?htmlspecialchars($_GET['producto'], ENT_QUOTES, 'UTF-8'):'default';
+
+//Variables de directorios
+$actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$directorio = dirname($_SERVER["PHP_SELF"]);
+$directorio =($directorio!='')?$directorio:'/';
+$http = (isset($_SERVER['HTTPS'])) ? 'https' : 'http';
+
+$path = $http."://$_SERVER[HTTP_HOST]";
+$fullPath = $path.$directorio;
+$fullPath = ($fullPath[strlen($fullPath)-1]=='/')?$fullPath:$fullPath.'/';
+
+$_SESSION['fullPath'] = $fullPath;       
+
+
+
+if ($actual_link == 'https://dominiofinal.ext/' || $actual_link == 'https://dominiofinal.ext')
+{
+
+   header("HTTP/1.1 301 Moved Permanently");
+   header('Location: https://www.dominiofinal.mx/');
+}
+
+include_once $helpers->getController($pagina);
+
 ?>
 <!doctype html>
 <html class="no-js" lang="es" ng-app="app">
@@ -26,41 +60,6 @@ if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO
         <!-- Place favicon.ico in the root directory -->
 
 
-        <?php
-        include_once 'commons/helpers.php';
-
-        $helpers = new Helpers();
-
-        //Variables de navegacion
-        $pagina = (isset($_GET['pagina']))?htmlspecialchars($_GET['pagina'], ENT_QUOTES, 'UTF-8'):'index';
-        $subpagina = (isset($_GET['subpagina']))?htmlspecialchars($_GET['subpagina'], ENT_QUOTES, 'UTF-8'):'default';
-        $categoria = (isset($_GET['categoria']))?htmlspecialchars($_GET['categoria'], ENT_QUOTES, 'UTF-8'):'default';
-        $producto = (isset($_GET['producto']))?htmlspecialchars($_GET['producto'], ENT_QUOTES, 'UTF-8'):'default';
-
-        //Variables de directorios
-        $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        $directorio = dirname($_SERVER["PHP_SELF"]);
-        $directorio =($directorio!='')?$directorio:'/';
-        $http = (isset($_SERVER['HTTPS'])) ? 'https' : 'http';
-
-        $path = $http."://$_SERVER[HTTP_HOST]";
-        $fullPath = $path.$directorio;
-        $fullPath = ($fullPath[strlen($fullPath)-1]=='/')?$fullPath:$fullPath.'/';
-        
-        $_SESSION['fullPath'] = $fullPath;       
-
-
-
-        if ($actual_link == 'https://dominiofinal.ext/' || $actual_link == 'https://dominiofinal.ext')
-        {
-
-           header("HTTP/1.1 301 Moved Permanently");
-           header('Location: https://www.dominiofinal.mx/');
-        }
-
-        include_once $helpers->getController($pagina);
-
-        ?>
         
         <title>SpartanRace</title>
         <meta name="description" content="">
