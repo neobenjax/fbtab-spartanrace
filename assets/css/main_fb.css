@@ -993,7 +993,7 @@ span.hashTag {
 
 @media only screen and (max-width : 768px) {
      span.estado{left: 10px;}
-     span.locacion{font-size: 31px;bottom: 0px;width: 100%;right: 0;text-align: center;}
+     
      .areaFormulario form#formRegistro {padding: 15px 20px;}
 
 }
@@ -1012,6 +1012,7 @@ span.hashTag {
     .areaModalidades{margin: -153px 0 0;}
     ul.modalidades > li{padding: 0 20px;}
     ul.modalidades > li p.descripMod{text-align: left;}
+    span.locacion{font-size: 31px;bottom: 0px;width: 100%;right: 0;text-align: center;}
 
 }
 
