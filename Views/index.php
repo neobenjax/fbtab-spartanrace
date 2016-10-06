@@ -2,16 +2,17 @@
 	
 	<div class="bannerHead">
 		<span class="hashTag">#SpartanRACEMX</span>
-		<a href="http://spartanrace.mx/race-details/?event_id=1955/spartan-race-chicked-coatepec-harinas.&lang=es" class="evento" id="spartanChicked" title="SPARTAN CHICKED 03/09" target="_blank">
-			SPARTAN CHICKED <span class="fechaRojo">03/09</span>
+		<a href="http://spartanrace.mx/race-details/?event_id=2313/spartan-race-beast-estado-de-m%C3%A9xico" class="evento" id="spartanChicked" title="SPARTAN BEAST" target="_blank">
+			SPARTAN BEAST
 		</a>
-		<a href="http://spartanrace.mx/race-details/?event_id=1953/spartan-race-super-coatepec-harinas&lang=es" class="evento" id="spartanSuper" title="SPARTAN SUPER 04/09" target="_blank">
-			SPARTAN SUPER <span class="fechaRojo">04/09</span>
+		<a href="http://spartanrace.mx/race-details/?event_id=2314/spartan-race-sprint-estado-de-m%C3%A8xico" class="evento" id="spartanSuper" title="SPARTAN SUPER SPRINT" target="_blank">
+			SPARTAN SPRINT
 		</a>
-		<span class="registrateYa">¡REGÍSTRATE YA!</span>
 		<span class="estado">ESTADO DE MÉXICO</span>
-		<span class="locacion">Coatepec Harinas</span>
-		<img src="<?php echo $fullPath; ?>assets/img/fondo_top_2.png" alt="Spartan Race Estado de México - Coatepec Harinas" class="imgBanner">
+		<span class="locacion">VALLE DE BRAVO</span>
+		<span class="fecha_periodo">26 Y 27 DE NOVIEMBRE</span>
+		<span class="registrateYa">¡REGÍSTRATE YA!</span>
+		<img src="<?php echo $fullPath; ?>assets/img/fondo_top_2.jpg" alt="Spartan Race Estado de México - Valle de Bravo" class="imgBanner">
 	</div>
 
 	<div class="banner2">
@@ -77,9 +78,9 @@
 	</div>
 
 	<div class="areaVideo">
-		<div class="fb-video" data-href="https://www.facebook.com/spartanracemexico/videos/1306429666051921/" data-width="810" data-show-text="false">
-			<blockquote cite="https://www.facebook.com/spartanracemexico/videos/1306429666051921/" class="fb-xfbml-parse-ignore">
-				<a href="https://www.facebook.com/spartanracemexico/videos/1306429666051921/">Trailer Amanalco Super</a>
+		<div class="fb-video" data-href="https://www.facebook.com/spartanracemexico/videos/1198031230225099/" data-width="810" data-show-text="false">
+			<blockquote cite="https://www.facebook.com/spartanracemexico/videos/1198031230225099/" class="fb-xfbml-parse-ignore">
+				<a href="https://www.facebook.com/spartanracemexico/videos/1198031230225099/">Trailer Amanalco Super</a>
 				<p>SPARTANS! Trabajamos para ustedes seleccionando las mejores  tomas panorámicas, expresiones y muestras de lo que fue Spartan Super Amanalco. Aquí un adelanto del video que estamos preparando para ustedes. AROO!</p>
 				Posted by <a href="https://www.facebook.com/spartanracemexico/">SPARTAN RACE MEXICO</a> on viernes, 6 de mayo de 2016
 			</blockquote>
@@ -138,12 +139,6 @@
 
 	<div class="contSpartanKids">
 		<img src="<?php echo $fullPath; ?>assets/img/fondo_bottom.png" alt="" class="imgBanner">
-	</div>
-
-	<div class="leyendaKids">
-		
-		Saltar, correr, llenarse de lodo, ayudarse unos a otros y divertirse mientras aprenden a conquistar obstáculos.
-
 	</div>
 
 	<div class="spartanRaceLigas">
