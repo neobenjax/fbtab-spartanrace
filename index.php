@@ -95,7 +95,7 @@ include_once $helpers->getController($pagina);
             <br>
             <span class="green">id_producto: <?php echo $id_producto; ?></span>
             <br>
-            <span class="green">Nombre Producto: <?php echo $nombre_producto; ?></span>
+            <span class="green">Nombre Productos: <?php echo $nombre_producto; ?></span>
           </div>
           <?php
             }
